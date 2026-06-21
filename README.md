@@ -37,7 +37,7 @@ flowchart TD
     
     subgraph Fuzzification
         C1[Membership Functions]
-        C2[ZO / OI / IP]
+        C2["ZO / OI / IP"]
         C1 ~~~ C2
         D1[Derece Hesapla]
         D2[Compute degree of membership]
@@ -46,7 +46,7 @@ flowchart TD
     
     subgraph Inference
         E1[Expert Rule Table]
-        E2[4×4 Matrix]
+        E2["4×4 Matrix"]
         E1 ~~~ E2
         F1[Rule Activation]
         F2[AND operation - min of degrees]
@@ -90,9 +90,9 @@ Each input (midterm, final) is fuzzified into three linguistic states:
 ```mermaid
 flowchart LR
     subgraph States
-        ZO[ZO - Zero / Low]
-        OI[OI - Middle / Intermediate]
-        IP[IP - High / Sufficient]
+        ZO["ZO - Zero / Low"]
+        OI["OI - Middle / Intermediate"]
+        IP["IP - High / Sufficient"]
     end
 ```
 
