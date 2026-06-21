@@ -62,7 +62,7 @@ flowchart TD
     
     subgraph Output
         I1[Letter Grade]
-        I2[A/B/C/D/F(up to 2)]
+        I2["A/B/C/D/F(up to 2)"]
         I1 ~~~ I2
     end
     
