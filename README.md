@@ -36,33 +36,45 @@ flowchart TD
     end
     
     subgraph Fuzzification
-        C[Membership Functions<br>ZO / OI / IP]
-        D[Derece Hesapla<br>Compute degree of membership]
+        C1[Membership Functions]
+        C2[ZO / OI / IP]
+        C1 ~~~ C2
+        D1[Derece Hesapla]
+        D2[Compute degree of membership]
+        D1 ~~~ D2
     end
     
     subgraph Inference
-        E[Expert Rule Table<br>4×4 Matrix]
-        F[Rule Activation<br>AND operation - min of degrees]
+        E1[Expert Rule Table]
+        E2[4×4 Matrix]
+        E1 ~~~ E2
+        F1[Rule Activation]
+        F2[AND operation - min of degrees]
+        F1 ~~~ F2
     end
     
     subgraph Defuzzification
-        G[Moment Hesapla<br>Center of Gravity]
+        G1[Moment Hesapla]
+        G2[Center of Gravity]
+        G1 ~~~ G2
         H[Crisp Success Score]
     end
     
     subgraph Output
-        I[Letter Grade<br>A/B/C/D/F(up to 2)]
+        I1[Letter Grade]
+        I2[A/B/C/D/F(up to 2)]
+        I1 ~~~ I2
     end
     
-    A --> C
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    D --> F
-    F --> G
-    G --> H
-    H --> I
+    A --> C1
+    B --> C1
+    C1 --> D1
+    D1 --> E1
+    E1 --> F1
+    D1 --> F1
+    F1 --> G1
+    G1 --> H
+    H --> I1
 ```
 
 ## Core Concepts
